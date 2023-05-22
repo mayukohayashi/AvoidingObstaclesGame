@@ -8,7 +8,11 @@ public class ObjectHits : MonoBehaviour
   private void OnCollisionEnter(Collision other)
   {
 
-    Debug.Log("Sparrow hits");
+    // Debug.Log("Sparrow hits");
+
+    GetComponent<MeshRenderer>().material.color = Color.red;
+
+
   }
 
 }
