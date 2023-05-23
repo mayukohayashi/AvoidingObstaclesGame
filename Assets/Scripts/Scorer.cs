@@ -9,9 +9,11 @@ public class Scorer : MonoBehaviour
 
   private void OnCollisionEnter(Collision other)
   {
-
-    hits++;
-    Debug.Log("すずめが何者かと接触してしまった…： " + hits + "回目");
+    if (other.gameObject.tag != "Hit")
+    {
+      hits++;
+      Debug.Log("すずめが何者かと接触してしまった…： " + hits + "回目");
+    }
 
   }
 }
